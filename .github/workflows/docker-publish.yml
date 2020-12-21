@@ -29,7 +29,6 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          registry: ghcr.io
           username: "seqyuan"
           password: ${{ secrets.GH }}
           tags: |

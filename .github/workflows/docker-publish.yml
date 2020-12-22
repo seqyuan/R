@@ -7,8 +7,6 @@ on:
       - main
 
     # Publish `v1.2.3` tags as releases.
-    tags:
-      - v*
 
   # Run tests for any PRs.
   pull_request:
@@ -31,7 +29,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
-          password: ${{ secrets.GH }}
+          password: ${{ secrets.PAT }}
         
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v2
